@@ -14,9 +14,21 @@ Before you begin, ensure you have the following installed:
     
     Node.js and npm
 
+Install this software for image 
+
 Installation and Setup
 
-1. Clone the Repository
+1. Install Tesseract OCR
+
+Download and install Tesseract from the official repository: https://github.com/UB-Mannheim/tesseract/wiki .
+
+Important: After installation, you may need to add the Tesseract installation path to your system's environment variables or specify it directly in the backend code. Open backend/app.py and update the following line with your Tesseract path if necessary:
+
+    # Update this path according to your Tesseract installation
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+
+2. Clone the Repository
 
 First, clone the repository to your local machine.
 
@@ -24,7 +36,7 @@ First, clone the repository to your local machine.
     
     cd Legal_chatbot
 
-2. Set Up the Backend
+3. Set Up the Backend
 
 The backend requires Python dependencies and API keys.
 
@@ -44,7 +56,7 @@ Open the .env file and add the following lines, replacing the placeholders with 
     GROQ_API_KEY="your_groq_api_key_here"
     GOOGLE_API_KEY="your_google_api_key_here"
 
-3. Set Up the Frontend
+4. Set Up the Frontend
 
 The frontend requires Node.js modules.
 
